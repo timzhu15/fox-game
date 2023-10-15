@@ -1,8 +1,8 @@
-import game from "./gameState"
+import game, { handleUserAction } from "./gameState";
 import initButtons from "./button";
 import { TICK_RATE } from "./constants";
 
-initButtons(game.handleUserAction);
+initButtons(handleUserAction);
 
 async function init() {
     console.log("starting game");
@@ -17,6 +17,6 @@ async function init() {
     }
 
     nextAnimationFrame();
-}
+};
 
 init();
